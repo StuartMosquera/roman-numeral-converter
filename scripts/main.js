@@ -33,21 +33,10 @@ function showRomanNum(number) {
   }
 }
 
-function arabicToRoman(number) {
-  let result = '';
-
-  for (const [value, numeral] of ROMAN_NUMS) {
-    while (number >= value) {
-      number -= value;
-      result += numeral;
-    }
-  }
-
-  return result;
-}
-
 function displayResult(message) {
-  output.style.display = 'block';
+  if (getComputedStyle(output).display === 'none') {
+    output.style.display = 'block';
+  }
 
   const styles = message.includes('Please') ? {
     backgroundColor: '#ffa6a6',
@@ -64,6 +53,19 @@ function displayResult(message) {
   Object.assign(output.style, styles);
 
   output.innerHTML = message;
+}
+
+function arabicToRoman(number) {
+  let result = '';
+
+  for (const [value, numeral] of ROMAN_NUMS) {
+    while (number >= value) {
+      number -= value;
+      result += numeral;
+    }
+  }
+
+  return result;
 }
 
 convertBtn.onclick = () => showRomanNum(parseInt(num.value));
