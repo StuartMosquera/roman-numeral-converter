@@ -1,3 +1,4 @@
+/* Reset styles */
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -20,6 +21,7 @@ button {
   padding: 0;
 }
 
+/* Global variables */
 :root {
   --btn-bg: linear-gradient(#ffca43, #ffab30);
   --font-size: 1.250rem;
@@ -29,6 +31,7 @@ button {
   --section-bg: #3c3c50;
 }
 
+/* Global styles */
 body {
   background-color: var(--main-bg);
   color: var(--primary-color);
@@ -46,6 +49,7 @@ body {
   row-gap: 1.563rem;
 }
 
+/* Header styles */
 header {
   line-height: 1.2;
   max-width: 320px;
@@ -57,6 +61,7 @@ h1 {
   font-weight: 200;
 }
 
+/* Converter Div styles */
 .converter-div {
   align-items: center;
   background-color: var(--section-bg);
@@ -80,7 +85,6 @@ h1 {
   background-color: #000;
   border: 1px solid #fff;
   color: var(--primary-color);
-  font-family: inherit;
   font-size: 2em;
   padding: 0.313rem 0.625rem;
   width: 100%;
@@ -115,6 +119,7 @@ h1 {
   padding: 0.5rem 1rem;
 }
 
+/* Footer styles */
 footer {
   margin-bottom: 4rem;
 }

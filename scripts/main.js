@@ -1,7 +1,9 @@
+// DOM Variables
 const num = document.getElementById('number');
 const convertBtn = document.getElementById('convert-btn');
 const output = document.getElementById('output');
 
+// Global Constants
 const ROMAN_NUMS = new Map([
   [1000, 'M'],
   [900, 'CM'],
@@ -18,6 +20,7 @@ const ROMAN_NUMS = new Map([
   [1, 'I']
 ]);
 
+// Main Function
 function showRomanNum(number) {
   if (isNaN(number)) {
     displayResult(`<p>Please enter a valid number.</p>`);
@@ -33,6 +36,7 @@ function showRomanNum(number) {
   }
 }
 
+// Helper Functions
 function displayResult(message) {
   if (getComputedStyle(output).display === 'none') {
     output.style.display = 'block';
@@ -68,6 +72,7 @@ function arabicToRoman(number) {
   return result;
 }
 
+// Input Events
 convertBtn.onclick = () => showRomanNum(parseInt(num.value));
 
 num.onkeydown = function(event) {
